@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PRISM", ".", "{BF7AA046-FEFD-494C-B228-1C31F34C22A6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PRISM"
+		Debug.AspNetCompiler.PhysicalPath = "..\PRISM\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PRISM\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PRISM"
+		Release.AspNetCompiler.PhysicalPath = "..\PRISM\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PRISM\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "21076"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		vali|Any CPU = vali|Any CPU
+		vali|Mixed Platforms = vali|Mixed Platforms
+		vali|x86 = vali|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.Release|x86.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.vali|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.vali|Any CPU.Build.0 = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.vali|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.vali|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BF7AA046-FEFD-494C-B228-1C31F34C22A6}.vali|x86.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getLiveContent">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLiveContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLiveContentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getContentById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ContentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getContentByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getContentByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFilesById_Type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ContentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FileType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFilesById_TypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFilesById_TypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getHomePageImages">
+        <s:complexType />
+      </s:element>
+      <s:element name="getHomePageImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getHomePageImagesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="publishContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ContentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="publishContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="publishContentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubHeaderData">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSubHeaderDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSubHeaderDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubHeaderImg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubHeaderID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubHeaderImgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSubHeaderImgResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getLiveContentSoapIn">
+    <wsdl:part name="parameters" element="tns:getLiveContent" />
+  </wsdl:message>
+  <wsdl:message name="getLiveContentSoapOut">
+    <wsdl:part name="parameters" element="tns:getLiveContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getContentByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getContentById" />
+  </wsdl:message>
+  <wsdl:message name="getContentByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getContentByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFilesById_TypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getFilesById_Type" />
+  </wsdl:message>
+  <wsdl:message name="getFilesById_TypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getFilesById_TypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHomePageImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:getHomePageImages" />
+  </wsdl:message>
+  <wsdl:message name="getHomePageImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:getHomePageImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="publishContentSoapIn">
+    <wsdl:part name="parameters" element="tns:publishContent" />
+  </wsdl:message>
+  <wsdl:message name="publishContentSoapOut">
+    <wsdl:part name="parameters" element="tns:publishContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSubHeaderDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getSubHeaderData" />
+  </wsdl:message>
+  <wsdl:message name="getSubHeaderDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getSubHeaderDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSubHeaderImgSoapIn">
+    <wsdl:part name="parameters" element="tns:getSubHeaderImg" />
+  </wsdl:message>
+  <wsdl:message name="getSubHeaderImgSoapOut">
+    <wsdl:part name="parameters" element="tns:getSubHeaderImgResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="getLiveContent">
+      <wsdl:input message="tns:getLiveContentSoapIn" />
+      <wsdl:output message="tns:getLiveContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentById">
+      <wsdl:input message="tns:getContentByIdSoapIn" />
+      <wsdl:output message="tns:getContentByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFilesById_Type">
+      <wsdl:input message="tns:getFilesById_TypeSoapIn" />
+      <wsdl:output message="tns:getFilesById_TypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHomePageImages">
+      <wsdl:input message="tns:getHomePageImagesSoapIn" />
+      <wsdl:output message="tns:getHomePageImagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="publishContent">
+      <wsdl:input message="tns:publishContentSoapIn" />
+      <wsdl:output message="tns:publishContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubHeaderData">
+      <wsdl:input message="tns:getSubHeaderDataSoapIn" />
+      <wsdl:output message="tns:getSubHeaderDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubHeaderImg">
+      <wsdl:input message="tns:getSubHeaderImgSoapIn" />
+      <wsdl:output message="tns:getSubHeaderImgSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLiveContent">
+      <soap:operation soapAction="http://tempuri.org/getLiveContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentById">
+      <soap:operation soapAction="http://tempuri.org/getContentById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFilesById_Type">
+      <soap:operation soapAction="http://tempuri.org/getFilesById_Type" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHomePageImages">
+      <soap:operation soapAction="http://tempuri.org/getHomePageImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishContent">
+      <soap:operation soapAction="http://tempuri.org/publishContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubHeaderData">
+      <soap:operation soapAction="http://tempuri.org/getSubHeaderData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubHeaderImg">
+      <soap:operation soapAction="http://tempuri.org/getSubHeaderImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLiveContent">
+      <soap12:operation soapAction="http://tempuri.org/getLiveContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentById">
+      <soap12:operation soapAction="http://tempuri.org/getContentById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFilesById_Type">
+      <soap12:operation soapAction="http://tempuri.org/getFilesById_Type" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHomePageImages">
+      <soap12:operation soapAction="http://tempuri.org/getHomePageImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishContent">
+      <soap12:operation soapAction="http://tempuri.org/publishContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubHeaderData">
+      <soap12:operation soapAction="http://tempuri.org/getSubHeaderData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubHeaderImg">
+      <soap12:operation soapAction="http://tempuri.org/getSubHeaderImg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://devlapp2/prism_webservice/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://devlapp2/prism_webservice/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

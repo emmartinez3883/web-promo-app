@@ -1,0 +1,65 @@
+﻿<%@ Master Language="VB" CodeFile="PRISM.master.vb" Inherits="PRISM"%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<link rel="Shortcut Icon" href="~/Images/prismicon.ico" />
+	<title>
+    <asp:ContentPlaceHolder ID="pageTitle" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+	<asp:ContentPlaceHolder id="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="wrapper">
+	<form id="form1" runat="server">
+			<asp:ScriptManager ID="ScriptManager1" runat="server">
+				<Scripts>
+<%--			<asp:ScriptReference Path="~/Scripts/prototype.js" />
+			<asp:ScriptReference Path="~/Scripts/effects.js" />
+			<asp:ScriptReference Path="~/Scripts/slideshow.js" />
+			<asp:ScriptReference Path="~/Scripts/client.js" />--%>
+				</Scripts>
+			</asp:ScriptManager>
+<table border="0" cellpadding="2" cellspacing="0" style="margin:0 auto;width:80%">
+  <tr>
+	<td>
+	  <img src="Images/prismlogo.png" alt="SimpleCMS" />
+        </td>
+      <td style="text-align:right">
+          Welcome, <br />
+          <asp:Label ID="UserLbl" runat="server" Text="" style="font-weight:bold;color:white"/>
+      </td>
+      </tr>
+    <tr>
+        <td colspan="2" style="background-image:url(./images/header.png)">
+				  <asp:Menu ID="navlist" runat="server" Orientation="Horizontal" DataSourceID="SiteMapDataSource1" >
+                  <LevelSelectedStyles>
+                  <asp:MenuItemStyle forecolor="#4d4d4d" />
+                  </LevelSelectedStyles>
+		  </asp:Menu>
+		<asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+	</td>
+  </tr>
+  <tr>
+	<td colspan="2">
+	  <asp:ContentPlaceHolder id="ContentPlaceHolder1"
+		  runat="server">
+	  </asp:ContentPlaceHolder>
+	</td>
+  </tr>
+</table>
+<br />
+<br />
+	</form>
+    <div class="push"></div>
+    </div>
+    <div class="footer">
+    <p>
+    LifeStream | 384 W. Orange Show Road, San Bernardino, CA 92408 | PRISM version&nbsp;<asp:Literal ID="VersionNum" runat="server" Text="<%$ AppSettings:Version%>" />
+    </p>
+    </div>
+</body>
+</html>
